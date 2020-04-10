@@ -12,5 +12,23 @@ export class TodosComponent implements OnInit {
   // the constructor is used to import services
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.todos = [
+      {
+        id: 1,
+        title: 'Todo One',
+        completed: false,
+      },
+      {
+        id: 2,
+        title: 'Todo Two',
+        completed: true,
+      },
+      {
+        id: 3,
+        title: 'Todo Three',
+        completed: false,
+      },
+    ];
+  }
 }
