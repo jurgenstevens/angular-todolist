@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todos.component.css'],
 })
 export class TodosComponent implements OnInit {
+  //todos property references Models/Todo.ts
+  todos: Todo[];
   // the constructor is used to import services
   constructor() {}
 
