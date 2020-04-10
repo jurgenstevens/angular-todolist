@@ -1,1 +1,4 @@
-<h1>Todos</h1>
+<!-- to loop through the array of todos use *ngFor for a for loop -->
+<ul *ngFor="let todo of todos">
+  <li>{{ todo.title }}</li>
+</ul>
