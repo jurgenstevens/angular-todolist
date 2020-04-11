@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Todo } from 'src/app/models/Todo';
 
 @Component({
   // this will be passed through todos.component.html
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo-item.component.css'],
 })
 export class TodoItemComponent implements OnInit {
+  // here is the input property and give it the type Todo like we did with the component
+  @Input() todo: Todo;
   constructor() {}
 
   ngOnInit(): void {}
