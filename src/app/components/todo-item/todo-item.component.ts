@@ -22,4 +22,12 @@ export class TodoItemComponent implements OnInit {
     };
     return classes;
   }
+  // this is the even handler for the checkbox
+  onToggle(todo) {
+    console.log('toggle');
+  }
+  // this is the event handler for the x button
+  onDelete(todo) {
+    console.log('toggle');
+  }
 }
