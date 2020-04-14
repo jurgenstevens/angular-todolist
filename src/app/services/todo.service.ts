@@ -16,6 +16,6 @@ export class TodoService {
 
   getTodos(): Observable<Todo> {
     // this is gonna be in todo type and will be an array
-    this.http.get<Todo[]>(todosUrl);
+    return this.http.get<Todo[]>(this.todosUrl);
   }
 }
