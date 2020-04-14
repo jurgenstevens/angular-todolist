@@ -24,10 +24,10 @@ export class TodoItemComponent implements OnInit {
   }
   // this is the even handler for the checkbox
   onToggle(todo) {
-    console.log('toggle');
+    todo.completed = !todo.completed;
   }
   // this is the event handler for the x button
   onDelete(todo) {
-    console.log('toggle');
+    console.log('delete');
   }
 }
