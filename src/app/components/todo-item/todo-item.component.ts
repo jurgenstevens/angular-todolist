@@ -31,7 +31,7 @@ export class TodoItemComponent implements OnInit {
     // toggle on server which will return an observable
     this.todoService
       .toggleCompleted(todo)
-      .susbcribe((todo) => console.log(todo));
+      .subscribe((todo) => console.log(todo));
   }
   // this is the event handler for the x button
   onDelete(todo) {
