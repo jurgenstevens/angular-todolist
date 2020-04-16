@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { TodoService } from '../../services/todo.service';
+
 import { Todo } from 'src/app/models/Todo';
 
 @Component({
@@ -10,7 +12,7 @@ import { Todo } from 'src/app/models/Todo';
 export class TodoItemComponent implements OnInit {
   // here is the input property and give it the type Todo like we did with the component
   @Input() todo: Todo;
-  constructor() {}
+  constructor(private todoService: TodoService) {}
 
   ngOnInit() {}
 
@@ -24,7 +26,12 @@ export class TodoItemComponent implements OnInit {
   }
   // this is the even handler for the checkbox
   onToggle(todo) {
+    // toggle in UI
     todo.completed = !todo.completed;
+    // toggle on server which will return an observable
+    this.todoService
+      .toggleCompleted(todo)
+      .susbcribe((todo) => console.log(todo));
   }
   // this is the event handler for the x button
   onDelete(todo) {
