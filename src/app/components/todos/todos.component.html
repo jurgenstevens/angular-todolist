@@ -1,2 +1,7 @@
 <!-- to loop through the array of todos use *ngFor for a for loop -->
-<app-todo-item *ngFor="let todo of todos" [todo]="todo"> </app-todo-item>
+<app-todo-item
+  *ngFor="let todo of todos"
+  [todo]="todo"
+  (deleteTodo)="deleteTodo($event)"
+>
+</app-todo-item>
