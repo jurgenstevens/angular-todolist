@@ -12,7 +12,8 @@ import { Todo } from 'src/app/models/Todo';
 export class TodoItemComponent implements OnInit {
   // here is the input property and give it the type Todo like we did with the component
   @Input() todo: Todo;
-  // this will emit something out to the parent component
+  // this will emit something out to the parent component <app-todo-item>
+  // in todos.component.html
   @Output() deleteTodo: EventEmitter<Todo> = new EventEmitter();
 
   constructor(private todoService: TodoService) {}
@@ -37,6 +38,7 @@ export class TodoItemComponent implements OnInit {
       .subscribe((todo) => console.log(todo));
   }
   // this is the event handler for the x button
+  // we're emmitting up through the @Output above...
   onDelete(todo) {
     this.deleteTodo.emit(todo);
   }
