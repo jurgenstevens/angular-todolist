@@ -21,6 +21,7 @@ export class TodosComponent implements OnInit {
   }
 
   deleteTodo(todo: Todo) {
-    console.log('delete me');
+    // this will return all of the todos that don't have that id
+    this.todos = this.todos.filter((t) => t.id !== todo.id);
   }
 }
