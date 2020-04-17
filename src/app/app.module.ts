@@ -6,11 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TodosComponent } from './components/todos/todos.component';
 import { TodoItemComponent } from './components/todo-item/todo-item.component';
+import { HeaderComponent } from './component/layout/header/header.component';
 
 // this is the root app module
 @NgModule({
   // this is where components are gonna go. New components must be added here as well
-  declarations: [AppComponent, TodosComponent, TodoItemComponent],
+  declarations: [AppComponent, TodosComponent, TodoItemComponent, HeaderComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
