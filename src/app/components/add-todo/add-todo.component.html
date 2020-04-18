@@ -1,3 +1,11 @@
 <form class="form">
-  <input type="text" name="title" />
+  <!-- this title input will be binded to the title property 
+    in add-todo.components.ts using the ngModel using brackets and parenthesis-->
+  <input
+    type="text"
+    name="title"
+    [{ngModel}]="title"
+    placeholder="Add Todo..."
+  />
+  <input type="submit" value="Submit" class="btn" />
 </form>
