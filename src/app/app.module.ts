@@ -11,7 +11,12 @@ import { HeaderComponent } from './component/layout/header/header.component';
 // this is the root app module
 @NgModule({
   // this is where components are gonna go. New components must be added here as well
-  declarations: [AppComponent, TodosComponent, TodoItemComponent, HeaderComponent],
+  declarations: [
+    AppComponent,
+    TodosComponent,
+    TodoItemComponent,
+    HeaderComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
