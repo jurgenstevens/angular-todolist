@@ -33,6 +33,11 @@ export class TodoService {
     return this.http.delete<Todo>(url, httpOptions);
   }
 
+  // Add Todo
+  addTodo(todo: Todo): Observable<Todo> {
+    return this.http.post<Todo>(this.todosUrl, todo, httpOptions);
+  }
+
   // Toggle Completed
   // this will return an observable with any because it's not formatted as an exact to do since it has a user id
   toggleCompleted(todo: Todo): Observable<any> {
